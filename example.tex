@@ -1,0 +1,62 @@
+
+\documentclass{article}
+
+\usepackage{lstcustom}
+
+\pagestyle{plain}
+
+\title{Latex Listings Eclipse Style}
+\date{}
+\author{Mark Royer}
+
+\begin{document}
+
+\abstract
+
+The following document is an example of using the
+\ttfamily{lstcustom.sty} file.  Please look at the following examples
+of how to use the style file. The default style is set to eclipse, and
+the default language is Java.  These are set at the end of the
+\ttfamily{.sty} file.
+
+\section*{Listing Inline}
+
+% So we don't create weird spacing for single words.
+\lstset{breaklines=false}
+
+You can use the \ttfamily{\textbackslash listinline\$command\$} to use the custom
+eclipse style markup in paragraphs.  The 8 basic types in Java are
+\lstinline$boolean$, \lstinline$byte$, \lstinline$char$,
+\lstinline$short$, \lstinline$int$, \lstinline$long$,
+\lstinline$float$, and \lstinline$double$. These should have been
+properly formatted in the previous sentence.
+
+% Make sure to break lines the rest of the document
+\lstset{breaklines=true}
+
+\section*{Block Listing Example}
+
+A slightly longer block example is shown in listing \ref{lst:simple}.
+
+\begin{lstlisting}[caption={A simple listing.}, label={lst:simple}]
+  /**
+    * @param args
+    *             Program arguments
+    */
+  public static void main(String[] args) {
+    // Now for the enlightening message.
+    System.out.println("Hmm... hello big world!";
+    // @TODO Finish this example
+    // Just some comment that is probably too long to fit in the space provided....
+  }
+\end{lstlisting}
+
+\section*{File Listing Example}
+
+An example that includes a \ttfamily{.java} file is shown in listing \ref{lst:file}.
+
+\lstinputlisting[caption={A listing from the file
+  \ttfamily{Rectangle.java}}, label={lst:file}]{Rectangle.java}
+
+\end{document}
+
