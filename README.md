@@ -31,7 +31,7 @@ as a template.  You can build the example by typing
 make
 ```
 
-in the root of the repository. The result is the file `example.pdf`.
+in the root of the repository. The result is the file `example.pdf.`
 
 Typing
 
