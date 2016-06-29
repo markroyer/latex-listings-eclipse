@@ -8,7 +8,7 @@ import java.util.List;
  * @author Mark Royer
  *
  */
-public class Square {
+public class Rectangle {
 
 	private float width;
 
@@ -27,7 +27,7 @@ public class Square {
 	 * @param width
 	 * @param height
 	 */
-	public Square(Point2D.Float location, float width, float height) {
+	public Rectangle(Point2D.Float location, float width, float height) {
 		super();
 		this.location = location;
 		this.width = width;
