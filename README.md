@@ -49,11 +49,11 @@ will remove all generated files.
 
 An example main method.
 
-![Main method](screenshots/main.png?raw=true "Main Method")
+![Main method](https://raw.githubusercontent.com/wiki/markroyer/latex-listings-eclipse/screenshots/main.png "Main Method")
 
 An example constructor.
 
-![Constructor](screenshots/constructor.png?raw=true "Constructor")
+![Constructor](https://raw.githubusercontent.com/wiki/markroyer/latex-listings-eclipse/screenshots/constructor.png?raw=true "Constructor")
 
 ## License
 
