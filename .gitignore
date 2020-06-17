@@ -1,4 +1,4 @@
 *.aux
 *.log
 example.pdf
-
+auto/

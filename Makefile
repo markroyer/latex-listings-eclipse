@@ -17,5 +17,5 @@ $(NAME).pdf: $(NAME).tex lstcustom.sty
 	pdflatex $(NAME).tex
 
 clean:
-	rm -f *~ $(addprefix $(NAME).,aux dvi log pdf)
+	rm -rf *~ auto $(addprefix $(NAME).,aux dvi log pdf)
 
