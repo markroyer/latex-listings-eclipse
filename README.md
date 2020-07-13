@@ -55,6 +55,12 @@ An example constructor.
 
 ![Constructor](https://raw.githubusercontent.com/wiki/markroyer/latex-listings-eclipse/screenshots/constructor.png?raw=true "Constructor")
 
+
+## Contributors
+
+Thanks to ANTONIO MANGAS RUIZ for his feedback and suggestions.
+
+
 ## License
 
 The project is licensed under the terms of the
