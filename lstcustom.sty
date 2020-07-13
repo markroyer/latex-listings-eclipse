@@ -34,6 +34,7 @@
 \definecolor{lightblue}{rgb}{0.4,0.4,1}
 
 \definecolor{stringColor}{rgb}{0.16,0.00,1.00}
+\definecolor{fieldColor}{rgb}{0.16,0.00,1.00}
 \definecolor{annotationColor}{rgb}{0.39,0.39,0.39}
 \definecolor{keywordColor}{rgb}{0.50,0.00,0.33}
 \definecolor{commentColor}{rgb}{0.25,0.50,0.37}
@@ -141,6 +142,23 @@
 \expandafter\docsvlist\expandafter{\eTags}#1}%
 }%
 
+% For manual eclipse field styling
+\newrobustcmd{\ef}[1]{%
+{\color{fieldColor}\lstfontfamily#1}%
+}
+\newrobustcmd{\efi}[1]{%
+{\color{fieldColor}\it\lstfontfamily#1}%
+}
+
+% For manual eclipse comment styling
+\newrobustcmd{\ecom}[1]{%
+{\color{commentColor}\lstfontfamily#1}%
+}
+\newrobustcmd{\ecomi}[1]{%
+{\color{commentColor}\it\lstfontfamily#1}%
+}
+
+
 
 \lstdefinestyle{eclipse}{
   basicstyle={\lstfontfamily},
@@ -190,7 +208,8 @@
   % From http://tex.stackexchange.com/questions/116534/lstlisting-line-wrapping
   postbreak=\raisebox{0ex}[0ex][0ex]{\ensuremath{\color{red}\hookrightarrow\space}},
   % Add additional keywords here
-  morekeywords={ enum, strictfp }
+  morekeywords={ enum, strictfp },
+  escapeinside={(*@}{@*)} 
 }
 
 \expandafter\lstset\expandafter{\jAnnotations}

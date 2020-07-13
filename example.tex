@@ -14,17 +14,17 @@
 \abstract
 
 The following document is an example of using the
-\ttfamily{lstcustom.sty} file.  Please look at the following examples
+\texttt{lstcustom.sty} file.  Please look at the following examples
 of how to use the style file. The default style is set to eclipse, and
 the default language is Java.  These are set at the end of the
-\ttfamily{.sty} file.
+\texttt{.sty} file.
 
 \section*{Listing Inline}
 
 % So we don't create weird spacing for single words.
 \lstset{breaklines=false}
 
-You can use the \ttfamily{\textbackslash listinline\$command\$} to use the custom
+You can use the \texttt{\textbackslash listinline\$command\$} to use the custom
 eclipse style markup in paragraphs.  The 8 basic types in Java are
 \lstinline$boolean$, \lstinline$byte$, \lstinline$char$,
 \lstinline$short$, \lstinline$int$, \lstinline$long$,
@@ -53,10 +53,65 @@ A slightly longer block example is shown in listing \ref{lst:simple}.
 
 \section*{File Listing Example}
 
-An example that includes a \ttfamily{.java} file is shown in listing \ref{lst:file}.
+An example that includes a \texttt{.java} file is shown in listing \ref{lst:file}.
 
 \lstinputlisting[caption={A listing from the file
-  \ttfamily{Rectangle.java}}, label={lst:file}]{Rectangle.java}
+  \texttt{Rectangle.java}}, label={lst:file}]{Rectangle.java}
+
+
+\section*{Further Customizations}
+
+Sometimes you just have to do things yourself.  If you really want to
+make custom changes inside code, then you escape and use standard
+\LaTeX\ as shown below.  For example, the enum below has no color or
+emphasis as is typical in Eclipse. 
+
+
+\begin{lstlisting}[caption={Without manual customizations.}, label={lst:nocustom}]
+  enum {
+    FIRST,
+    SECOND,
+    THIRD
+  }
+\end{lstlisting}
+
+
+You may add your own latex by escaping out of the listing.  I've added
+two macros to mimic Eclipse field (\texttt{\textbackslash ef}) and
+Eclipse field italicized (\texttt{\textbackslash efi}).  There is also
+a similar \texttt{\textbackslash ecom} and \texttt{\textbackslash
+  ecomi} for comment styling. The results are shown below.
+
+
+\begin{lstlisting}[caption={With manual customizations.}, label={lst:custom}]
+  enum {
+    (*@\efi{FIRST}@*),
+    (*@\efi{SECOND}@*),
+    (*@\efi{THIRD}@*)
+  }
+\end{lstlisting}
+
+
+The nice thing about this approach is that you can use anything that
+you normally can in \LaTeX.  For example,
+
+
+\begin{lstlisting}[caption={Something a little different.}, label={lst:wacky}]
+  enum {
+    (*@\efi{$\alpha$}@*),
+    (*@\efi{$\beta$}@*),
+    (*@\efi{$\gamma$}@*),
+    (*@\efi{$e$}@*) // (*@\ecom{$\lim_{n\to\infty}{\left( 1 + \frac{1}{n}
+        \right)^n}$}@*)
+  }
+\end{lstlisting}
+
+\noindent
+makes heavy use of the math environment. Of course, some of the lines
+are a little too big, so the bounding box appears slightly broken.
+
 
 \end{document}
 
+
+% LocalWords:  lstcustom listinline boolean Customizations enum
