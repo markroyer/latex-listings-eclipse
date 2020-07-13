@@ -43,6 +43,13 @@
 \definecolor{lineNumberColor}{rgb}{0.47,0.47,0.47}
 
 
+% Additional keywords that may be missing
+
+%\makeatletter
+%\lst@InstallKeywords k{attributes}{attributestyle}\slshape{attributestyle}{}ld
+%\makeatother
+
+
 % Here are the Javadoc tags and the version they were introduced based on the Java 7 docs here:
 %
 % http://docs.oracle.com/javase/7/docs/technotes/tools/solaris/javadoc.html#javadoctags
@@ -181,7 +188,9 @@
   captionpos=b,
   breaklines=true,
   % From http://tex.stackexchange.com/questions/116534/lstlisting-line-wrapping
-  postbreak=\raisebox{0ex}[0ex][0ex]{\ensuremath{\color{red}\hookrightarrow\space}}
+  postbreak=\raisebox{0ex}[0ex][0ex]{\ensuremath{\color{red}\hookrightarrow\space}},
+  % Add additional keywords here
+  morekeywords={ enum, strictfp }
 }
 
 \expandafter\lstset\expandafter{\jAnnotations}

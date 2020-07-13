@@ -10,6 +10,16 @@ import java.util.List;
  */
 public class Rectangle {
 
+	enum Size {
+		SMALL,
+		MEDIUM,
+		LARGE
+	};
+	
+	strictfp class Calculations {
+		// Ensure portability...
+	}
+
 	private float width;
 
 	private float height;
@@ -34,6 +44,9 @@ public class Rectangle {
 		this.height = height;
 		@SuppressWarnings("rawtypes")
 		List l = new ArrayList();
+		
+		assert true;
+				
 	}
 
 	/**
