@@ -87,6 +87,7 @@ are a little too big, so the bounding box appears slightly broken.
 ## Contributors
 
 Thanks to ANTONIO MANGAS RUIZ for his feedback and suggestions.
+Thanks to [mrbela](https://github.com/mrbela) and [Urlike Fischer](https://tex.stackexchange.com/users/2388/ulrike-fischer) for pointing out a solution to the beamer bug described [here](https://tex.stackexchange.com/questions/586477/missing-number-treated-as-zero-within-beamer-and-lstcustom).
 
 
 ## License
