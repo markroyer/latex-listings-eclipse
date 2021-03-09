@@ -18,26 +18,17 @@
 \frame{\titlepage}
 
 \begin{frame}[fragile]
-
-  The following slides are demos of using the \texttt{lstcustom}
-  package with Beamer
+  \frametitle{Beamer Example}
+  
+  The following slides demo the \texttt{lstcustom} package with Beamer
 
   \begin{alertblock}{Important!}
     \begin{itemize}
     \item Frames that contain code must use the \texttt{fragile}
       option
     \item You can use the following delimiters with
-      \texttt{\textbackslash lstinline}
-      \begin{itemize}
-      \item \$
-      \item !
-      \item |
-      \item \texttildelow
-      \item +
-      \item -
-      \item \verb=^=
-      \item /
-      \end{itemize}
+      \texttt{\textbackslash lstinline}:\newline \$ , !  , | ,
+      \texttildelow , + , - , \verb=^= , /
     \end{itemize}
 
   \end{alertblock}
@@ -95,11 +86,76 @@
   caption={Lines 32-40 of the file \texttt{Rectangle.java}},
   label={lst:file}]
   {Rectangle.java}
-
-  
   
 \end{frame}
 
+
+\begin{frame}[fragile]
+  \frametitle{Customizations}
+
+  \section*{}
+
+  Sometimes you just have to do things yourself.
+  For example, the enum below has no color or emphasis as is typical in Eclipse. 
+
+\begin{lstlisting}[caption={Without manual customizations.}, label={lst:nocustom}]
+  enum {
+    FIRST,
+    SECOND,
+    THIRD
+  }
+\end{lstlisting}
+
+\end{frame}
+
+
+\begin{frame}[fragile]
+  \frametitle{Customizations}
+
+  You may add your own latex by escaping out of the listing.  I've added
+  two macros to mimic Eclipse field (\texttt{\textbackslash ef}) and
+  Eclipse field italicized (\texttt{\textbackslash efi}).  There is also
+  a similar \texttt{\textbackslash ecom} and \texttt{\textbackslash
+    ecomi} for comment styling. The results are shown below.
+
+
+\begin{lstlisting}[caption={With manual customizations.}, label={lst:custom}]
+  enum {
+    (*@\efi{FIRST}@*),
+    (*@\efi{SECOND}@*),
+    (*@\efi{THIRD}@*)
+  }
+\end{lstlisting}
+
+\end{frame}
+
+
+\begin{frame}[fragile]
+  \frametitle{Further Customizations}
+
+  The nice thing about this approach is that you can use anything that
+  you normally can in \LaTeX.  For example,
+
+
+\begin{lstlisting}[caption={Something a little different.}, label={lst:wacky}]
+  enum {
+    (*@\efi{$\alpha$}@*),
+    (*@\efi{$\beta$}@*),
+    (*@\efi{$\gamma$}@*),
+    (*@\efi{$e$}@*) // (*@\ecom{$\lim_{n\to\infty}{\left( 1 + \frac{1}{n}
+        \right)^n}$}@*)
+  }
+\end{lstlisting}
+
+  \noindent
+  makes heavy use of the math environment. Of course, some of the
+  lines are a little too big, so the bounding box appears slightly broken.
+
+  
+\end{frame}
+
+
 \end{document}
 
-% LocalWords:  lstcustom Beamer boolean
+% LocalWords:  lstcustom Beamer boolean firstline lastline enum ef
+% LocalWords:  Customizations lstinline efi ecom ecomi
