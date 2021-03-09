@@ -1,4 +1,10 @@
 *.aux
 *.log
-example.pdf
 auto/
+beamer-example.nav
+beamer-example.out
+beamer-example.pdf
+beamer-example.snm
+beamer-example.toc
+beamer-example.vrb
+example.pdf
