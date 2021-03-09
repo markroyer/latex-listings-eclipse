@@ -12,7 +12,8 @@ Make sure that you have the following Debian TeX packages installed.
 texlive-fonts-extra
 ```
 
-This package is for the beramono monospace font that can be **bolded**.
+We use this package for the beramono monospace font which allows
+**bold** typeface.
 
 ## Usage
 
@@ -36,8 +37,8 @@ beamer presentation, there is also a template file called
 make
 ```
 
-in the root of the repository. The result is the file `example.pdf`
-and `beamer-example.pdf`.
+in the root of the repository. This results in the generation of the
+files `example.pdf` and `beamer-example.pdf`.
 
 Typing
 
@@ -93,5 +94,9 @@ Thanks to ANTONIO MANGAS RUIZ for his feedback and suggestions.
 The project is licensed under the terms of the
 [GPL3](https://www.gnu.org/licenses/gpl-3.0.en.html) license.
 
-<!--  LocalWords:  lstcustom texlive usepackage
+<!--  LocalWords:  lstcustom texlive usepackage beramono monospace ef
+ -->
+<!--  LocalWords:  tex beamer pdf Customizations enum efi ecom ecomi
+ -->
+<!--  LocalWords:  MANGAS
  -->
