@@ -197,6 +197,15 @@
   showstringspaces=false
 }
 
+% Originally from
+% http://tex.stackexchange.com/questions/116534/lstlisting-line-wrapping
+
+% Bug fix for fragile beamer from
+% https://tex.stackexchange.com/questions/586477/missing-number-treated-as-zero-within-beamer-and-lstcustom
+\newsavebox\lstcustomredarrow
+\sbox\lstcustomredarrow{\raisebox{0ex}[0ex][0ex]{\ensuremath{\color{red}\hookrightarrow\space}}}
+
+
 \lstset{
   language=Java,%c++,
   style=eclipse,
@@ -205,8 +214,7 @@
   frame=lrtb,
   captionpos=b,
   breaklines=true,
-  % From http://tex.stackexchange.com/questions/116534/lstlisting-line-wrapping
-  postbreak=\raisebox{0ex}[0ex][0ex]{\ensuremath{\color{red}\hookrightarrow\space}},
+  postbreak=\usebox\lstcustomredarrow,% 
   % Add additional keywords here
   morekeywords={ enum, strictfp },
   escapeinside={(*@}{@*)} 
