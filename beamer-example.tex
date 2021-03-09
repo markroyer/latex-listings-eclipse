@@ -1,0 +1,67 @@
+\documentclass{beamer}
+
+\usepackage[utf8]{inputenc}
+
+\usepackage{textcomp} % For \texttildelow
+
+\usepackage{lstcustom}
+
+
+\title{The \texttt{lstcustom} package \& Beamer}
+\author{Mark Royer}
+%\institute{}
+\date{2021}
+
+
+\begin{document}
+
+\frame{\titlepage}
+
+\begin{frame}[fragile]
+
+  The following slides are demos of using the \texttt{lstcustom}
+  package with Beamer
+
+  \begin{alertblock}{Important!}
+    \begin{itemize}
+    \item Frames that contain code must use the \texttt{fragile}
+      option
+    \item You can use the following delimiters with
+      \texttt{\textbackslash lstinline}
+      \begin{itemize}
+      \item \$
+      \item !
+      \item |
+      \item \texttildelow
+      \item +
+      \item -
+      \item \verb=^=
+      \item /
+      \end{itemize}
+    \end{itemize}
+
+  \end{alertblock}
+  
+\end{frame}
+
+
+\begin{frame}[fragile]
+
+  % This slide is to check the \lstinline delimiters
+  The 8 basic types in Java are
+  \begin{itemize}
+  \item \lstinline$boolean$,
+  \item \lstinline!byte!,
+  \item \lstinline|char|,
+  \item \lstinline~short~,
+  \item \lstinline+int+,
+  \item \lstinline-long-,
+  \item \lstinline^float^,
+  \item and \lstinline/double/.
+  \end{itemize}
+
+\end{frame}
+
+\end{document}
+
+% LocalWords:  lstcustom Beamer boolean
