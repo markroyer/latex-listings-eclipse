@@ -1,21 +1,19 @@
-NAME=example
+EXAMPLE=example
+BEAMER=beamer-example
 
-default: pdf
+default: $(EXAMPLE).pdf $(BEAMER).pdf
 
-dvi: $(NAME).dvi
-
-$(NAME).dvi: $(NAME).tex lstcustom.sty
-	latex $(NAME).tex
+%.dvi: %.tex lstcustom.sty
+	latex $<
 	# Run latex twice for references
-	latex $(NAME).tex
+	latex $<
 
-pdf: $(NAME).pdf
-
-$(NAME).pdf: $(NAME).tex lstcustom.sty
-	pdflatex $(NAME).tex
+%.pdf: %.tex lstcustom.sty
+	pdflatex $<
 	# Run latex twice for references
-	pdflatex $(NAME).tex
+	pdflatex $<
 
 clean:
-	rm -rf *~ auto $(addprefix $(NAME).,aux dvi log pdf)
+	rm -rf *~ auto $(addprefix $(EXAMPLE).,aux dvi log pdf) \
+                       $(addprefix $(BEAMER).,aux dvi log pdf)
 
