@@ -15,5 +15,5 @@ default: $(EXAMPLE).pdf $(BEAMER).pdf
 
 clean:
 	rm -rf *~ auto $(addprefix $(EXAMPLE).,aux dvi log pdf) \
-                       $(addprefix $(BEAMER).,aux dvi log pdf)
+                       $(addprefix $(BEAMER).,aux dvi log nav out pdf snm toc vrb)
 
