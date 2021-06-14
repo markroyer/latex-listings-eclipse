@@ -26,6 +26,6 @@ startdocker-build:
 	docker run $(dockeropts) $(dockerimage) make
 
 clean:
-	rm -rf *~ auto $(addprefix $(EXAMPLE).,aux dvi log pdf) \
-                       $(addprefix $(BEAMER).,aux dvi log nav out pdf snm toc vrb)
+	rm -rf *~ auto $(addprefix $(EXAMPLE).,aux dvi fdb_latexmk fls log pdf) \
+           $(addprefix $(BEAMER).,aux dvi fdb_latexmk fls log nav out pdf snm toc vrb)
 
