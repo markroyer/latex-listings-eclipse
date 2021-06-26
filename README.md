@@ -1,6 +1,11 @@
 # latex-listings-eclipse
 A custom listings style file for latex that looks like the Eclipse IDE style.
 
+*NOTE*: You may also be interested in this same style implemented
+using the latex *minted* package.  An example of how to make your own
+custom styles with Pygments is found here:
+[latex-minted-eclipse](https://gitlab.com/mark.e.royer/latex-minted-eclipse)
+
 ## Setup
 
 Download the project and copy the `lstcustom.sty` to the directory of
@@ -101,5 +106,5 @@ The project is licensed under the terms of the
  -->
 <!--  LocalWords:  tex beamer pdf Customizations enum efi ecom ecomi
  -->
-<!--  LocalWords:  MANGAS
+<!--  LocalWords:  MANGAS Pygments mrbela Urlike
  -->
