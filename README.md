@@ -1,7 +1,10 @@
 # latex-listings-eclipse
+
+![Build](https://github.com/markroyer/latex-listings-eclipse/actions/workflows/ci.yml/badge.svg)
+
 A custom listings style file for latex that looks like the Eclipse IDE style.
 
-*NOTE*: You may also be interested in this same style implemented
+**NOTE**: You may also be interested in this same style implemented
 using the latex *minted* package.  An example of how to make your own
 custom styles with Pygments is found here:
 [latex-minted-eclipse](https://gitlab.com/mark.e.royer/latex-minted-eclipse)
