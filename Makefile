@@ -1,5 +1,5 @@
-EXAMPLE=example
-BEAMER=beamer-example
+example_file=example
+beamer_file=beamer-example
 
 dockerimage:=registry.gitlab.com/mark.e.royer/texlive-full-with-emacs:20210611
 dockeropts:=-u 1000:1000 -w /test \
@@ -11,7 +11,7 @@ dockeropts:=-u 1000:1000 -w /test \
 
 .PHONY: clean squeaky-clean startdocker startdocker-build startdocker-build
 
-default: $(EXAMPLE).pdf $(BEAMER).pdf
+default: $(example_file).pdf $(beamer_file).pdf
 
 %.pdf: %.tex lstcustom.sty
 	latexmk -pdf -shell-escape $<
@@ -26,6 +26,6 @@ startdocker-build:
 	docker run $(dockeropts) $(dockerimage) make
 
 clean:
-	rm -rf *~ auto $(addprefix $(EXAMPLE).,aux dvi fdb_latexmk fls log pdf) \
-           $(addprefix $(BEAMER).,aux dvi fdb_latexmk fls log nav out pdf snm toc vrb)
+	rm -rf *~ auto $(addprefix $(example_file).,aux dvi fdb_latexmk fls log pdf) \
+           $(addprefix $(beamer_file).,aux dvi fdb_latexmk fls log nav out pdf snm toc vrb)
 
